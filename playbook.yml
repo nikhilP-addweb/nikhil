@@ -11,7 +11,7 @@
       tags: [ system ]
 
     - name: Install PHP Extensions
-      apt: name={{ item }} state=latest
+      apt: name={{ item }}  state=latest
       loop: "{{ php_modules }}"
       tags: [ system ]
 
