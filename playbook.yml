@@ -6,12 +6,12 @@
   tasks:
 
     - name: Install LAMP Packages
-      apt: name={{ item }}  state=latest
+      apt: name={{ item }} state=latest
       loop: [ 'nginx', 'mysql-server', 'python3-pymysql', 'php', 'php-mysql', 'python3-mysqldb', 'php7.4-fpm' ]
       tags: [ system ]
 
     - name: Install PHP Extensions
-      apt: name={{ item }}  state=latest
+      apt: name={{ item }} state=latest
       loop: "{{ php_modules }}"
       tags: [ system ]
 
